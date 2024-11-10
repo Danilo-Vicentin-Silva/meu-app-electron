@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Compilador Online</title>
+  </head>
+  <body>
+    <h1>Compilador Online</h1>
+    <select id="language">
+      <option value="java">Java</option>
+      <option value="python3">Python</option>
+      <option value="c">C</option>
+      <option value="cpp">C++</option>
+      <option value="nodejs">NodeJS</option>
+    </select>
+    <br />
+    <textarea spellcheck="false" id="code" rows="10" cols="50"></textarea>
+    <br />
+    <button onclick="compileCode()">Compilar e Executar</button>
+    <pre id="output"></pre>
+
+    <script src="renderer.js"></script>
+  </body>
+</html>
