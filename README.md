@@ -4,12 +4,12 @@
 
 ## Visão Geral
 
-Meu Projeto Electron é uma aplicação de desktop multiplataforma desenvolvida com o framework [Electron](https://www.electronjs.org/). Este projeto visa fornecer uma interface amigável e intuitiva para [descrição do propósito da aplicação].
+Meu Projeto Electron é uma aplicação de desktop multiplataforma desenvolvida com o framework [Electron](https://www.electronjs.org/). Este projeto visa fornecer uma interface amigável e intuitiva disponibilizando diversos compiladores das linguagens de programação mais usadas do mercado.
 
 ## Funcionalidades
 
-- **Funcionalidade 1**: Descrição da funcionalidade 1.
-- **Funcionalidade 2**: Descrição da funcionalidade 2.
+- **Compilador Integrado**: utilize o compilador com uma interface intuitiva para testar seus códigos.
+- **Linguagens de Programação mais usadas**: o compilador oferece diversas linguagens de programação mais famosas do mercado.
 - **Funcionalidade 3**: Descrição da funcionalidade 3.
 
 ## Capturas de Tela
