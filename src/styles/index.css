@@ -105,6 +105,15 @@ footer p {
   color: #6b6b6bc4;
 }
 
+iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
 @media screen and (min-width: 768px) {
   body {
     width: 80vw;
