@@ -15,6 +15,20 @@ header {
   padding: 10px;
 }
 
+#home-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+#home-button:hover {
+  opacity: 0.8;
+  transition: all 0.3s ease-in-out;
+}
+
 main #language {
   display: block;
   width: 90%;
@@ -114,10 +128,18 @@ iframe {
   border: none;
 }
 
+.large-devices {
+  display: none;
+}
+
 @media screen and (min-width: 768px) {
   body {
     width: 80vw;
     margin: auto;
     text-align: center;
   }
+
+  .large-devices {
+    display: block;
+  }   
 }

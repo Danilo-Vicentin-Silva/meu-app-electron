@@ -2,9 +2,9 @@ const { app, BrowserWindow, ipcMain } = require("electron");
 const path = require("path");
 const axios = require("axios");
 
-// require("electron-reload")(__dirname, {
-//   electron: require(`${__dirname}/node_modules/electron`),
-// });
+require("electron-reload")(__dirname, {
+  electron: require(`${__dirname}/node_modules/electron`),
+});
 
 function createWindow() {
   const win = new BrowserWindow({
@@ -44,6 +44,13 @@ ipcMain.on("compile-code", async (event, { language, code }) => {
     event.sender.send("compile-result", response.data.output);
   } catch (error) {
     event.sender.send("compile-result", `Erro: ${error.message}`);
+  }
+});
+
+ipcMain.on("navigate-home", () => {
+  const allWindows = BrowserWindow.getAllWindows();
+  if (allWindows.length > 0) {
+    allWindows[0].loadFile("src/index.html");
   }
 });
 
