@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Compilador Online</title>
+    <title>Master Compiler</title>
     <link rel="stylesheet" href="./styles/index.css" />
     <link
       rel="apple-touch-icon"
@@ -29,8 +29,18 @@
       <h1><strong>Master Compiler</strong></h1>
     </header>
 
+    <nav>
+      <ul>
+        <li><img src="../public/java.png" height="50" width="50" alt="Java"></li>
+        <li><img src="../public/python.png" height="50" width="50" alt="Python"></li>
+        <li><img src="../public/c.png" height="50" width="50" alt="C"></li>
+        <li><img src="../public/c++.png" height="50" width="50" alt="C++"></li>
+        <li><img src="../public/nodejs.png" height="50" width="50" alt="NodeJS"></li>
+    </nav>
+
     <main>
       <select id="language">
+        <option disabled selected>&lt Selecione uma linguagem &gt</option>
         <option value="java">Java</option>
         <option value="python3">Python</option>
         <option value="c">C</option>
@@ -38,18 +48,21 @@
         <option value="nodejs">NodeJS</option>
       </select>
       <br />
+      <h2>Seu Código</h2>
+      <p>
+        <small
+          >Não utilize pontuação nem solicitações de entradas de usuários</small
+        >
+      </p>
+      <br />
       <textarea spellcheck="false" id="code" rows="10" cols="50"></textarea>
       <br />
+      <h2>Terminal de Saída</h2>
       <pre id="output"></pre>
       <button class="black-button" id="compile-button" onclick="compileCode()">
         Executar
       </button>
-      <button
-        class="black-button"
-        id="clear-button"
-        type="reset"
-        onclick="clearCode()"
-      >
+      <button class="black-button" id="clear-button" type="reset">
         Limpar
       </button>
     </main>

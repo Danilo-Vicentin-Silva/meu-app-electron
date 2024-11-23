@@ -15,6 +15,16 @@ header {
   padding: 10px;
 }
 
+nav ul {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  padding: 10px;
+  gap: 20px;
+}
+
 main #language {
   display: block;
   width: 90%;
@@ -39,12 +49,12 @@ main #code {
   font-family: monospace;
   display: block;
   width: 90%;
-  height: 50vh;
+  height: 39vh;
   padding: 10px;
   margin: auto;
   border: none;
   border-radius: 5px;
-  font-size: 1.5em;
+  font-size: 1.2em;
   color: whitesmoke;
   background-color: rgba(0, 0, 0, 0.493);
   text-align: left;
@@ -127,5 +137,5 @@ iframe {
 
   .large-devices {
     display: block;
-  }   
+  }
 }

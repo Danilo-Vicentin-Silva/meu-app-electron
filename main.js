@@ -1,10 +1,6 @@
-const { app, BrowserWindow, ipcMain } = require("electron");
-const path = require("path");
-const axios = require("axios");
-
-require("electron-reload")(__dirname, {
-  electron: require(`${__dirname}/node_modules/electron`),
-});
+const { app, BrowserWindow, ipcMain } = require("electron")
+const path = require("path")
+const axios = require("axios")
 
 function createWindow() {
   const win = new BrowserWindow({
@@ -15,14 +11,14 @@ function createWindow() {
       nodeIntegration: true,
       contextIsolation: false,
     },
-  });
+  })
 
-  win.loadFile("src/index.html");
+  win.loadFile("src/index.html")
 }
 
 ipcMain.on("compile-code", async (event, { language, code }) => {
   try {
-    const utf8Code = Buffer.from(code, "utf-8").toString();
+    const utf8Code = Buffer.from(code, "utf-8").toString()
 
     const response = await axios.post(
       "https://api.jdoodle.com/execute",
@@ -39,33 +35,33 @@ ipcMain.on("compile-code", async (event, { language, code }) => {
           "Content-Type": "application/json; charset=utf-8",
         },
       }
-    );
+    )
 
-    event.sender.send("compile-result", response.data.output);
+    event.sender.send("compile-result", response.data.output)
   } catch (error) {
-    event.sender.send("compile-result", `Erro: ${error.message}`);
+    event.sender.send("compile-result", `Erro: ${error.message}`)
   }
-});
+})
 
 ipcMain.on("navigate-home", () => {
-  const allWindows = BrowserWindow.getAllWindows();
+  const allWindows = BrowserWindow.getAllWindows()
   if (allWindows.length > 0) {
-    allWindows[0].loadFile("src/index.html");
+    allWindows[0].loadFile("src/index.html")
   }
-});
+})
 
 app.whenReady().then(() => {
-  createWindow();
+  createWindow()
 
   app.on("activate", () => {
     if (BrowserWindow.getAllWindows().length === 0) {
-      createWindow();
+      createWindow()
     }
-  });
-});
+  })
+})
 
 app.on("window-all-closed", () => {
   if (process.platform !== "darwin") {
-    app.quit();
+    app.quit()
   }
-});
+})
