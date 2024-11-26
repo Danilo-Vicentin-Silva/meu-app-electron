@@ -26,7 +26,8 @@
     "electron-reload": "^2.0.0-alpha.1"
   },
   "dependencies": {
+    "axios": "^1.7.7",
     "electron-squirrel-startup": "^1.0.1",
-    "axios": "^1.7.7"
+    "particlesjs": "^2.2.3"
   }
 }

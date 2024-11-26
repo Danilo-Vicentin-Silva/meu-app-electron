@@ -31,11 +31,26 @@
 
     <nav>
       <ul>
-        <li><img src="../public/java.png" height="50" width="50" alt="Java"></li>
-        <li><img src="../public/python.png" height="50" width="50" alt="Python"></li>
-        <li><img src="../public/c.png" height="50" width="50" alt="C"></li>
-        <li><img src="../public/c++.png" height="50" width="50" alt="C++"></li>
-        <li><img src="../public/nodejs.png" height="50" width="50" alt="NodeJS"></li>
+        <li>
+          <img
+            id="java-logo"
+            src="../public/java.png"
+            height="50"
+            width="50"
+            alt="Java"
+          />
+        </li>
+        <li>
+          <img src="../public/python.png" height="50" width="50" alt="Python" />
+        </li>
+        <li><img src="../public/c.png" height="50" width="50" alt="C" /></li>
+        <li>
+          <img src="../public/c++.png" height="50" width="50" alt="C++" />
+        </li>
+        <li>
+          <img src="../public/nodejs.png" height="50" width="50" alt="NodeJS" />
+        </li>
+      </ul>
     </nav>
 
     <main>
@@ -48,17 +63,21 @@
         <option value="nodejs">NodeJS</option>
       </select>
       <br />
-      <h2>Seu Código</h2>
-      <p>
-        <small
-          >Não utilize pontuação nem solicitações de entradas de usuários</small
-        >
-      </p>
-      <br />
-      <textarea spellcheck="false" id="code" rows="10" cols="50"></textarea>
-      <br />
-      <h2>Terminal de Saída</h2>
-      <pre id="output"></pre>
+      <section id="code-section">
+        <div id="code-container" class="code-container">
+          <h2>Seu Código</h2>
+          <p>Não utilize pontuação nem solicitações de entradas de usuários</p>
+          <textarea spellcheck="false" id="code" rows="10" cols="50"></textarea>
+        </div>
+
+        <br />
+
+        <div id="output-container" class="code-container">
+          <h2>Terminal de Saída</h2>
+          <p>Os erros e saídas serão mostrados aqui</p>
+          <pre id="output"></pre>
+        </div>
+      </section>
       <button class="black-button" id="compile-button" onclick="compileCode()">
         Executar
       </button>

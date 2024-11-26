@@ -2,6 +2,11 @@ const { app, BrowserWindow, ipcMain } = require("electron")
 const path = require("path")
 const axios = require("axios")
 
+//!
+require("electron-reload")(__dirname, {
+  electron: require(`${__dirname}/node_modules/electron`),
+})
+
 function createWindow() {
   const win = new BrowserWindow({
     width: 800,
@@ -49,6 +54,8 @@ ipcMain.on("navigate-home", () => {
     allWindows[0].loadFile("src/index.html")
   }
 })
+
+
 
 app.whenReady().then(() => {
   createWindow()
